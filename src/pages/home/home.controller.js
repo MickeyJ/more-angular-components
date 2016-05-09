@@ -1,9 +1,9 @@
 class HomeCtrl {
-  constructor() {
+  constructor(AppConstants) {
     
-    this.name = 'Home'
+    this.name = AppConstants.pages.home
 
   }
 }
 
-export default [HomeCtrl]
+export default ['AppConstants', HomeCtrl]

@@ -1,10 +1,16 @@
-@mixin makeRow($boxCount, $margin){
-  width: calc(100% / #{$boxCount} - #{$margin});
+
+
+@function makeRow($boxCount, $margin){
+  @return calc(100% / #{$boxCount} - #{$margin});
 }
 
 %center{
   margin-left: auto;
   margin-right: auto;
+}
+
+%marg-sm{
+  margin: 1%;
 }
 
 %marg-sm-vert{

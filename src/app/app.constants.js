@@ -1,7 +1,7 @@
 
 const AppConstants = {
   appName: 'Some App',
-  pageNames: {
+  pages: {
     home: 'Home',
     about: 'About'
   }

@@ -1,9 +1,9 @@
 class AboutCtrl{
-  constructor(){
+  constructor(AppConstants){
     
-    this.name = 'About'
+    this.name = AppConstants.pages.about
     
   }
 }
 
-export default [AboutCtrl]
+export default ['AppConstants', AboutCtrl]

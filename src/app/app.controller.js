@@ -4,7 +4,7 @@ class AppCtrl {
 
     this.state = $state;
     this.name = AppConstants.appName;
-    this.pages = AppConstants.pageNames;
+    this.pages = AppConstants.pages;
     
   }
 }

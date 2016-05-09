@@ -1,3 +1,5 @@
+//noinspection SassScssResolvedByNameOnly
+
 #header{
 
   #nav{
@@ -8,20 +10,20 @@
     left: 0;
 
     .logo-link{
-      color: DodgerBlue;
+      color: $app-blue;
     }
 
     .page-link{
-      color: POWDERBLUE;
+      color: $app-white-green;
       @include transition(all 0.1s);
 
       &:hover{
-        color: PaleGreen;
+        color: $app-lite-green;
       }
     }
 
     .active-page{
-      color: PaleGreen;
+      color: $app-lite-green;
       text-decoration: underline;
     }
   }

@@ -5,7 +5,7 @@ const DEV = process.env.NODE_ENV==='development';
 const PROD = process.env.NODE_ENV==='production';
 
 const config = {
-  entry: './src/app.js',
+  entry: './src',
   output: {
     path: `${__dirname}/public`,
     filename: 'bundle.js'

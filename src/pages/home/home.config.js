@@ -5,7 +5,7 @@ function HomeConfig($stateProvider) {
     url: '/home',
     controllerAs: 'home',
     controller: 'HomeCtrl',
-    template: require('./home.html')
+    template: require('./_home.html')
   });
 
 }

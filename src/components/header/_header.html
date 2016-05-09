@@ -1,0 +1,31 @@
+
+<header id="header">
+
+  <nav id="nav" class="navbar navbar-inverse">
+
+    <a ng-bind="header.appName"
+       class="navbar-brand logo-link"
+       ui-sref="app.home">
+    </a>
+
+    <ul class="nav navbar-nav">
+
+      <li class="nav-item">
+        <a ng-bind="header.pages.home"
+           class="nav-link page-link"
+           ui-sref-active="active-page"
+           ui-sref="app.home">
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a ng-bind="header.pages.about"
+           class="nav-link page-link"
+           ui-sref-active="active-page"
+           ui-sref="app.about">
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+</header>

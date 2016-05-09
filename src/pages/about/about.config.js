@@ -5,7 +5,7 @@ function AboutConfig($stateProvider){
       url: '/about',
       controllerAs: 'about',
       controller: 'AboutCtrl',
-      template: require('./about.html')
+      template: require('./_about.html')
     })
 }
 

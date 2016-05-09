@@ -1,10 +1,10 @@
 
-const AppFooter = {
-  template: require('./footer.html'),
+const FooterComponent= {
+  template: require('./_footer.html'),
   controllerAs: 'footer',
   bindings: {
     appName: '='
   }
 };
 
-export default AppFooter;
+export default FooterComponent;

@@ -33,14 +33,10 @@ const config = {
     })
   ],
   resolve: {
-    extensions: ['', '.html', '.js', '.scss', '.css', '.json']
+    extensions: ['', '.html', '.js', '.scss', '.css']
   },
   module: {
     loaders: [
-      {
-        test: /\.json/,
-        loader: 'json-loader'
-      },
       {
         test: /\.js/,
         loader: 'babel-loader',

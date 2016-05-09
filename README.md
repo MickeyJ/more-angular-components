@@ -1,6 +1,5 @@
-## IMDB Movie Search
+## More Angular Components
 
-[__Live Demo__](https://mickey-omdb.herokuapp.com/ )
 
 ```bash
   

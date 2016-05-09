@@ -4,6 +4,8 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
+var users = require('./routes/users');
+
 var app = express();
 
 app.use(cors());
@@ -12,7 +14,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('*', function(req, res, next) {
+app.use('/users', users);
+
+app.use('*', (req, res, next) =>{
   res.sendFile('index.html', {
     root: __dirname + '/public/'
   });

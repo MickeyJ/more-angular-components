@@ -6,5 +6,4 @@ const GreetComponent = {
     user: '='
   }
 };
-
 export default GreetComponent;

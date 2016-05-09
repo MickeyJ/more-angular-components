@@ -4,26 +4,25 @@ import 'jquery'
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'angular-animate/angular-animate'
-import 'angular-ui-router-anim-in-out/anim-in-out'
-import 'angular-ui-router-anim-in-out/css/anim-in-out.css'
 import './style/main.scss'
 
-import AppConfig  from './app/app.config'
-import AppCtrl from './app/app.controller'
-import AppConstants  from './app/app.constants'
+import AppConstants  from './app_config/app.constants'
+import AppConfig  from './app_config/app.config'
+import AppCtrl from './app_config/app.controller'
+import AppRun from './app_config/app.run'
 
-import HeaderComponent from './components/header/header.component'
-import FooterComponent from './components/footer/footer.component'
-
-import UserService from './services/UserService'
-
+import './services'
+import './components'
+import './layout'
 import './pages/home';
 import './pages/about';
 
 const requires = [
   'ui.router',
-  'ngAnimate', 
-  'anim-in-out',
+  'ngAnimate',
+  'app.services',
+  'app.layout',
+  'app.components',
   'app.home',
   'app.about'
 ];
@@ -31,8 +30,6 @@ const requires = [
 angular
   .module( 'app', requires )
   .constant('AppConstants', AppConstants)
-  .component('appHeader', HeaderComponent )
-  .component('appFooter', FooterComponent )
   .controller('AppCtrl', AppCtrl )
-  .service('UserService', UserService )
-  .config( AppConfig );
+  .config( AppConfig )
+  .run( AppRun );

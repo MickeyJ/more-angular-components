@@ -6,7 +6,7 @@ function AppConfig($stateProvider, $urlRouterProvider, $locationProvider){
       abstract: true,
       controllerAs: '$app',
       controller: 'AppCtrl',
-      template: require('./_app.html')
+      template: require('./../layout/_layout.html')
     });
 
   $urlRouterProvider.otherwise('/home');

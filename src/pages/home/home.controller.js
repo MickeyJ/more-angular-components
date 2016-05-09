@@ -2,11 +2,13 @@
 
 class HomeCtrl {
   constructor(AppConstants, UserService) {
-    
-    this.name = AppConstants.pages.home;
-    this.user = UserService.getUser(1);
-    
+
+    this.appName = AppConstants.appName;
+
+    UserService.getUser(1).then(user => {
+      this.user = user.data;
+    })
+
   }
 }
-
 export default ['AppConstants', 'UserService', HomeCtrl]

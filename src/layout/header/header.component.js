@@ -1,5 +1,5 @@
 
-const HeaderComponent = {
+const AppHeader= {
   template: require('./_header.html'),
   controllerAs: 'header',
   bindings: {
@@ -7,5 +7,4 @@ const HeaderComponent = {
     pages: '='
   }
 };
-
-export default HeaderComponent;
+export default AppHeader;

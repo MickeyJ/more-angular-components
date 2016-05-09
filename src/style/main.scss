@@ -7,10 +7,10 @@
 @import 'common/base';
 @import 'common/flexbox';
 
-@import '../components/header/header';
-@import '../components/footer/footer';
+@import '../layout/header/header';
+@import '../layout/footer/footer';
 @import '../components/greet/greet';
 
-@import '../app/app';
+@import '../layout/layout';
 @import '../pages/home/home';
 @import '../pages/about/about';

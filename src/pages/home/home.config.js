@@ -1,3 +1,4 @@
+
 function HomeConfig($stateProvider) {
 
   $stateProvider
@@ -5,9 +6,8 @@ function HomeConfig($stateProvider) {
     url: '/home',
     controllerAs: 'home',
     controller: 'HomeCtrl',
-    template: require('./_home.html')
+    template: require('./_home.html'),
+    title: 'Home'
   });
-
 }
-
 export default ['$stateProvider', HomeConfig];

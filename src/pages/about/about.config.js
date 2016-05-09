@@ -1,3 +1,4 @@
+
 function AboutConfig($stateProvider){
   
   $stateProvider
@@ -5,8 +6,8 @@ function AboutConfig($stateProvider){
       url: '/about',
       controllerAs: 'about',
       controller: 'AboutCtrl',
-      template: require('./_about.html')
+      template: require('./_about.html'),
+      title: 'About'
     })
 }
-
 export default ['$stateProvider', AboutConfig]

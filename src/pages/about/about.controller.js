@@ -2,10 +2,9 @@
 
 class AboutCtrl{
   constructor(AppConstants){
-    
-    this.name = AppConstants.pages.about
+
+    this.appName = AppConstants.appName;
     
   }
 }
-
 export default ['AppConstants', AboutCtrl]

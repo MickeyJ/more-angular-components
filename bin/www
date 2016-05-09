@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var app = require('../server');
-var debug = require('debug')('ng-IMDB:server');
+var debug = require('debug')('more-angular-components:server');
 var http = require('http');
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);

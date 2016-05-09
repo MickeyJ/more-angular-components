@@ -1,11 +1,12 @@
 const webpack = require('webpack');
+const AnnotatePlugin = require('ng-annotate-webpack-plugin');
 const strip = require('strip-loader');
 
 const DEV = process.env.NODE_ENV==='development';
 const PROD = process.env.NODE_ENV==='production';
 
 const config = {
-  entry: './src',
+  entry: ['./src'],
   output: {
     path: `${__dirname}/public`,
     filename: 'bundle.js'
@@ -19,6 +20,7 @@ const config = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -31,10 +33,14 @@ const config = {
     })
   ],
   resolve: {
-    extensions: ['', '.html', '.js', '.scss', '.css']
+    extensions: ['', '.html', '.js', '.scss', '.css', '.json']
   },
   module: {
     loaders: [
+      {
+        test: /\.json/,
+        loader: 'json-loader'
+      },
       {
         test: /\.js/,
         loader: 'babel-loader',
@@ -69,15 +75,23 @@ if(!DEV){
   config.module.loaders.push({
     test: /\.js/,
     exclude: /node_modules/,
-    loaders: [
-      'ng-annotate',
-      strip.loader('console.log')
-    ]
+    loader: strip.loader('console.log')
   });
   config.plugins.push(
+    new AnnotatePlugin({
+      add: true
+    }),
     new webpack.optimize.UglifyJsPlugin({
-      compressor: { warnings: true }
+      mangle: false,
+      compressor: {
+        warnings: true
+      }
     })
+  )
+} else {
+  config.entry.push('webpack/hot/dev-server');
+  config.plugins.push(
+    new webpack.HotModuleReplacementPlugin()
   )
 }
 

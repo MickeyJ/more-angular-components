@@ -1,9 +1,12 @@
-class HomeCtrl {
-  constructor(AppConstants) {
-    
-    this.name = AppConstants.pages.home
+/** @namespace this */
 
+class HomeCtrl {
+  constructor(AppConstants, UserService) {
+    
+    this.name = AppConstants.pages.home;
+    this.user = UserService.getUser(1);
+    
   }
 }
 
-export default ['AppConstants', HomeCtrl]
+export default ['AppConstants', 'UserService', HomeCtrl]

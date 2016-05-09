@@ -15,6 +15,8 @@ import AppConstants  from './app/app.constants'
 import HeaderComponent from './components/header/header.component'
 import FooterComponent from './components/footer/footer.component'
 
+import UserService from './services/UserService'
+
 import './pages/home';
 import './pages/about';
 
@@ -32,4 +34,5 @@ angular
   .component('appHeader', HeaderComponent )
   .component('appFooter', FooterComponent )
   .controller('AppCtrl', AppCtrl )
+  .service('UserService', UserService )
   .config( AppConfig );

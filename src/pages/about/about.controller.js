@@ -1,3 +1,5 @@
+/** @namespace this */
+
 class AboutCtrl{
   constructor(AppConstants){
     

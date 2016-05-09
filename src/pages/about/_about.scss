@@ -1,9 +1,12 @@
 //noinspection SassScssResolvedByNameOnly
 
 #about-page{
+  margin-top: 5%;
 
-  h3{
-    color: $app-dark-green;
+  p{
+    line-height: 150%;
+    text-indent: 20px;
+    @extend %lite-font-style;
   }
 
 }

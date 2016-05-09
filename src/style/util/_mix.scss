@@ -1,3 +1,33 @@
+
+@mixin dead-center-text($height){
+  height: $height;
+  line-height: $height;
+  text-align: center;
+}
+
+@mixin banner-shadow($depth, $blur, $color){
+  -webkit-box-shadow: (
+      inset 0 10px $depth -#{$blur} $color,
+      inset 0 -10px $depth -#{$blur} $color
+  );
+  -moz-box-shadow: (
+      inset 0 10px $depth -#{$blur} $color,
+      inset 0 -10px $depth -#{$blur} $color
+  );
+  -ms-box-shadow: (
+      inset 0 10px $depth -#{$blur} $color,
+      inset 0 -10px $depth -#{$blur} $color
+  );
+  -o-box-shadow: (
+      inset 0 10px $depth -#{$blur} $color,
+      inset 0 -10px $depth -#{$blur} $color
+  );
+  box-shadow: (
+      inset 0 10px $depth -#{$blur} $color,
+      inset 0 -10px $depth -#{$blur} $color
+  );
+}
+
 /**
 *  -----------------------------------------------------------
 *                           SHADOWS
@@ -43,7 +73,7 @@
 *  -----------------------------------------------------------
 */
 
-@mixin gradient($one, $two, $three, $four, $five){
+@mixin gradient-5($one, $two, $three, $four, $five){
   background: -webkit-linear-gradient($one, $two, $three, $four, $five);
   background: -moz-linear-gradient($one, $two, $three, $four, $five);
   background: -ms-linear-gradient($one, $two, $three, $four, $five);
@@ -51,7 +81,7 @@
   background: linear-gradient($one, $two, $three, $four, $five);
 }
 
-@mixin gradient-2($one, $two, $three){
+@mixin gradient-3($one, $two, $three){
   background: -webkit-linear-gradient($one, $two, $three);
   background: -moz-linear-gradient($one, $two, $three);
   background: -ms-linear-gradient($one, $two, $three);
@@ -97,7 +127,6 @@
   -ms-align-content: $content;
   -o-align-content: $content;
   align-content: $content;
-
 }
 
 @mixin align-items($content){
@@ -106,7 +135,6 @@
   -ms-align-items: $content;
   -o-align-items: $content;
   align-items: $content;
-
 }
 
 @mixin align-self($content){
@@ -115,25 +143,6 @@
   -ms-align-self: $content;
   -o-align-self: $content;
   align-self: $content;
-
-}
-
-@mixin flex-grow($grow){
-  -webkit-flex-grow: $grow;
-  -moz-flex-grow: $grow;
-  -ms-flex-grow: $grow;
-  -o-flex-grow: $grow;
-  flex-grow: $grow;
-
-}
-
-@mixin flex-flow($flow){
-  -webkit-flex-flow: $flow;
-  -moz-flex-flow: $flow;
-  -ms-flex-flow: $flow;
-  -o-flex-flow: $flow;
-  flex-flow: $flow;
-
 }
 
 @mixin flex-wrap($wrap){

@@ -3,11 +3,13 @@
 @import 'util/vars';
 @import 'util/colors';
 
+@import 'common/font';
 @import 'common/base';
 @import 'common/flexbox';
 
 @import '../components/header/header';
 @import '../components/footer/footer';
+@import '../components/greet/greet';
 
 @import '../app/app';
 @import '../pages/home/home';

@@ -1,3 +1,4 @@
+/** @namespace this */
 
 class AppCtrl {
   constructor($state, AppConstants) {

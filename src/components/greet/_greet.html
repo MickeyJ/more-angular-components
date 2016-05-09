@@ -1,0 +1,32 @@
+<div id="greet-box">
+
+  <h2>Welcome {{greet.user.name}}!</h2>
+
+  <article class="col-md-6" >
+    <img
+      src="{{greet.user.avatar}}"
+      class="img-responsive img-circle"
+      style="margin: auto"
+      alt="avatar"
+    />
+  </article>
+
+  <article class="col-md-6">
+
+    <div class="user-info-item">
+      <h4>Name</h4>
+      <span ng-bind="greet.user.name"></span>
+    </div>
+
+    <div class="user-info-item">
+      <h4>Age</h4>
+      <span ng-bind="greet.user.age"></span>
+    </div>
+
+    <div class="user-info-item">
+      <h4>Favorite Color</h4>
+      <span ng-bind="greet.user.fav_color"></span>
+    </div>
+
+  </article>
+</div>
